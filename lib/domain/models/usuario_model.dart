@@ -9,7 +9,7 @@ class Usuario{
     String ciudad;
     String pais;
     int estado;
-    DateTime fecha_registro;
+    DateTime fechaRegistro;
 
 
   Usuario({
@@ -22,7 +22,7 @@ class Usuario{
       required this.ciudad,
       required this.pais,
       required this.estado,
-      required this.fecha_registro
+      required this.fechaRegistro
   });
 
     factory Usuario.fromJson(Map<String, dynamic> map) {
@@ -36,7 +36,7 @@ class Usuario{
             ciudad: map['ciudad'],
             pais: map['pais'],
             estado: map['estado'],
-            fecha_registro: DateTime.parse(map['fecha_registro'])
+            fechaRegistro: DateTime.parse(map['fechaRegistro'])
         );
     }
 

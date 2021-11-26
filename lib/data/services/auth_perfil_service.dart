@@ -21,11 +21,11 @@ class AuthPerfilService implements GenericService {
     );
     if (response.statusCode == 200) {
       var res = json.decode(response.body);
-      final List<AuthPerfil> auth_perfiles = [];
-      for (var auth_perfil in res['auth_perfil']) {
-        auth_perfiles.add(AuthPerfil.fromJson(auth_perfil));
+      final List<AuthPerfil> authPerfiles = [];
+      for (var authPerfil in res['auth_perfil']) {
+        authPerfiles.add(AuthPerfil.fromJson(authPerfil));
       }
-      return auth_perfiles;
+      return authPerfiles;
     } else {
       throw Exception('Error on request');
     }

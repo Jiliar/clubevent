@@ -6,13 +6,13 @@ class EventoSuscripcion{
   int guid;
   Evento evento;
   Usuario usuario;
-  DateTime fecha_suscripcion;
+  DateTime fechaSuscripcion;
 
   EventoSuscripcion({
     required this.guid,
     required this.evento,
     required this.usuario,
-    required this.fecha_suscripcion
+    required this.fechaSuscripcion
   });
 
   factory EventoSuscripcion.fromJson(Map<String, dynamic> map) {
@@ -20,7 +20,7 @@ class EventoSuscripcion{
         guid: map['guid'],
         evento: map['evento'],
         usuario: map['usuario'],
-        fecha_suscripcion: map['fecha_suscripcion']
+        fechaSuscripcion: map['fechaSuscripcion']
     );
   }
 

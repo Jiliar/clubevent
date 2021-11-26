@@ -1,9 +1,7 @@
 import 'package:clubevent/data/services/usuario_service.dart';
-import 'package:clubevent/domain/models/usuario_actividad_model.dart';
 import 'package:clubevent/domain/models/usuario_model.dart';
 import 'package:clubevent/domain/usecases/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 
 class UsuarioResponseScreen extends StatelessWidget {
@@ -37,7 +35,7 @@ class UsuarioResponseScreen extends StatelessWidget {
                     Text("Ciudad: ${usuario.ciudad}"),
                     Text("País: ${usuario.pais}"),
                     Text("Estado: ${usuario.estado}"),
-                    Text("Creado en: ${usuario.fecha_registro}"),
+                    Text("Creado en: ${usuario.fechaRegistro}"),
                   ],
                 ),
               );

@@ -2,7 +2,6 @@ import 'package:clubevent/data/services/evento_service.dart';
 import 'package:clubevent/domain/models/evento_model.dart';
 import 'package:clubevent/domain/usecases/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 
 class EventoResponseScreen extends StatelessWidget {
@@ -32,9 +31,9 @@ class EventoResponseScreen extends StatelessWidget {
                     Text("Fecha: ${evento.fecha}"),
                     Text("Dirección: ${evento.direccion}"),
                     Text("Estado: ${evento.estado}"),
-                    Text("Creado por: ${evento.usuario_creador.nombre+' '
-                                        +evento.usuario_creador.apellido}"),
-                    Text("Creado en: ${evento.fecha_registro}"),
+                    Text("Creado por: ${evento.usuarioCreador.nombre+' '
+                                        +evento.usuarioCreador.apellido}"),
+                    Text("Creado en: ${evento.fechaRegistro}"),
                   ],
                 ),
               );

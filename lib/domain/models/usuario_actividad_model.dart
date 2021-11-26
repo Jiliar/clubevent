@@ -10,7 +10,7 @@ class UsuarioActividad{
   String imagen;
   String valor;
   int estado;
-  DateTime fecha_registro;
+  DateTime fechaRegistro;
 
 
   UsuarioActividad({
@@ -21,7 +21,7 @@ class UsuarioActividad{
     required this.imagen,
     required this.valor,
     required this.estado,
-    required this.fecha_registro
+    required this.fechaRegistro
   });
 
   factory UsuarioActividad.fromJson(Map<String, dynamic> map) {
@@ -33,7 +33,7 @@ class UsuarioActividad{
         imagen: map['imagen'],
         valor: map['valor'],
         estado: map['estado'],
-        fecha_registro: DateTime.parse(map['fecha_registro'])
+        fechaRegistro: DateTime.parse(map['fechaRegistro'])
     );
   }
 }

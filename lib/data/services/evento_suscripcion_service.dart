@@ -21,11 +21,11 @@ class EventoSuscripcionService implements GenericService {
     );
     if (response.statusCode == 200) {
       var res = json.decode(response.body);
-      final List<EventoSuscripcion> eventos_suscripciones = [];
-      for (var evento_suscripcion in res['evento_suscripcion']) {
-        eventos_suscripciones.add(EventoSuscripcion.fromJson(evento_suscripcion));
+      final List<EventoSuscripcion> eventosSuscripciones = [];
+      for (var eventoSuscripcion in res['eventoSuscripcion']) {
+        eventosSuscripciones.add(EventoSuscripcion.fromJson(eventoSuscripcion));
       }
-      return eventos_suscripciones;
+      return eventosSuscripciones;
     } else {
       throw Exception('Error on request');
     }

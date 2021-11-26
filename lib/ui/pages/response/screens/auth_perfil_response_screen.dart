@@ -2,7 +2,6 @@ import 'package:clubevent/data/services/auth_perfil_service.dart';
 import 'package:clubevent/domain/models/auth_perfil_model.dart';
 import 'package:clubevent/domain/usecases/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 
 class AuthPerfilResponseScreen extends StatelessWidget {

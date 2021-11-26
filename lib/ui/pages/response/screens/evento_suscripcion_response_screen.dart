@@ -2,7 +2,6 @@ import 'package:clubevent/data/services/evento_suscripcion_service.dart';
 import 'package:clubevent/domain/models/evento_suscripcion_model.dart';
 import 'package:clubevent/domain/usecases/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 
 class EventoSuscripcionResponseScreen extends StatelessWidget {
@@ -22,17 +21,17 @@ class EventoSuscripcionResponseScreen extends StatelessWidget {
           return ListView.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
-              EventoSuscripcion evento_suscripcion = items[index];
+              EventoSuscripcion eventoSuscripcion = items[index];
               return Card(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Nombre evento: ${evento_suscripcion.evento.nombre}"),
-                    Text("Fecha evento: ${evento_suscripcion.evento.fecha}"),
-                    Text("Usuario: ${evento_suscripcion.usuario.nombre
-                                +' '+evento_suscripcion.usuario.apellido}"),
-                    Text("Suscrito en: ${evento_suscripcion.fecha_suscripcion}"),
+                    Text("Nombre evento: ${eventoSuscripcion.evento.nombre}"),
+                    Text("Fecha evento: ${eventoSuscripcion.evento.fecha}"),
+                    Text("Usuario: ${eventoSuscripcion.usuario.nombre
+                                +' '+eventoSuscripcion.usuario.apellido}"),
+                    Text("Suscrito en: ${eventoSuscripcion.fechaSuscripcion}"),
                   ],
                 ),
               );

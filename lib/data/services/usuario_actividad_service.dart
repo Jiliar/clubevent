@@ -21,11 +21,11 @@ class UsuarioActividadService implements GenericService {
     );
     if (response.statusCode == 200) {
       var res = json.decode(response.body);
-      final List<UsuarioActividad> usuario_actividades = [];
-      for (var usuario_actividad in res['usuario_actividad']) {
-        usuario_actividades.add(UsuarioActividad.fromJson(usuario_actividad));
+      final List<UsuarioActividad> usuarioActividades = [];
+      for (var usuarioActividad in res['usuario_actividad']) {
+        usuarioActividades.add(UsuarioActividad.fromJson(usuarioActividad));
       }
-      return usuario_actividades;
+      return usuarioActividades;
     } else {
       throw Exception('Error on request');
     }

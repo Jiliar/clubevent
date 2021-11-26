@@ -7,8 +7,8 @@ class Evento{
   String fecha;
   String direccion;
   int estado;
-  Usuario usuario_creador;
-  DateTime fecha_registro;
+  Usuario usuarioCreador;
+  DateTime fechaRegistro;
 
   Evento({
     required this.guid,
@@ -16,8 +16,8 @@ class Evento{
     required this.fecha,
     required this.direccion,
     required this.estado,
-    required this.usuario_creador,
-    required this.fecha_registro
+    required this.usuarioCreador,
+    required this.fechaRegistro
   });
 
   factory Evento.fromJson(Map<String, dynamic> map) {
@@ -27,8 +27,8 @@ class Evento{
         fecha: map['fecha'],
         direccion: map['direccion'],
         estado:  map['estado'],
-        usuario_creador: map['usuario_creador'],
-        fecha_registro: DateTime.parse(map['fecha_registro'])
+        usuarioCreador: map['usuarioCreador'],
+        fechaRegistro: DateTime.parse(map['fechaRegistro'])
     );
   }
 

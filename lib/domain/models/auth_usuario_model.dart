@@ -9,7 +9,7 @@ class AuthUsuario{
   Usuario usuario;
   AuthPerfil perfil;
   int estado;
-  DateTime fecha_registro;
+  DateTime fechaRegistro;
 
   AuthUsuario({
     required this.guid,
@@ -18,7 +18,7 @@ class AuthUsuario{
     required this.usuario,
     required this.perfil,
     required this.estado,
-    required this.fecha_registro
+    required this.fechaRegistro
   });
 
 
@@ -30,7 +30,7 @@ class AuthUsuario{
         usuario: map['usuario'],
         estado:  map['estado'],
         perfil: map['perfil'],
-        fecha_registro: DateTime.parse(map['fecha_registro'])
+        fechaRegistro: DateTime.parse(map['fechaRegistro'])
     );
   }
 

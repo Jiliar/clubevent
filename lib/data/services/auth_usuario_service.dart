@@ -21,11 +21,11 @@ class AuthUsuarioService implements GenericService {
     );
     if (response.statusCode == 200) {
       var res = json.decode(response.body);
-      final List<AuthUsuario> auth_usuarios = [];
-      for (var auth_usuario in res['auth_usuario']) {
-        auth_usuarios.add(AuthUsuario.fromJson(auth_usuario));
+      final List<AuthUsuario> authUsuarios = [];
+      for (var authUsuario in res['auth_usuario']) {
+        authUsuarios.add(AuthUsuario.fromJson(authUsuario));
       }
-      return auth_usuarios;
+      return authUsuarios;
     } else {
       throw Exception('Error on request');
     }

@@ -2,7 +2,6 @@ import 'package:clubevent/data/services/usuario_actividad_service.dart';
 import 'package:clubevent/domain/models/usuario_actividad_model.dart';
 import 'package:clubevent/domain/usecases/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 
 class UsuarioActividadResponseScreen extends StatelessWidget {
@@ -22,20 +21,20 @@ class UsuarioActividadResponseScreen extends StatelessWidget {
           return ListView.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
-              UsuarioActividad usuario_actividad = items[index];
+              UsuarioActividad usuarioActividad = items[index];
               return Card(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Evento: ${usuario_actividad.evento.nombre}"),
-                    Text("Fecha Evento: ${usuario_actividad.evento.fecha_registro}"),
-                    Text("Usuario: ${usuario_actividad.usuario.nombre+' '+
-                                      usuario_actividad.usuario.apellido}"),
-                    Text("Tipo: ${usuario_actividad.tipo}"),
-                    Text("Imagen: ${usuario_actividad.imagen}"),
-                    Text("Valor: ${usuario_actividad.valor}"),
-                    Text("Creado en: ${usuario_actividad.fecha_registro}"),
+                    Text("Evento: ${usuarioActividad.evento.nombre}"),
+                    Text("Fecha Evento: ${usuarioActividad.evento.fechaRegistro}"),
+                    Text("Usuario: ${usuarioActividad.usuario.nombre+' '+
+                                      usuarioActividad.usuario.apellido}"),
+                    Text("Tipo: ${usuarioActividad.tipo}"),
+                    Text("Imagen: ${usuarioActividad.imagen}"),
+                    Text("Valor: ${usuarioActividad.valor}"),
+                    Text("Creado en: ${usuarioActividad.fechaRegistro}"),
                   ],
                 ),
               );

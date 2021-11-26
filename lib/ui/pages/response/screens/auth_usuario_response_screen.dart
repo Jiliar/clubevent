@@ -2,7 +2,6 @@ import 'package:clubevent/data/services/auth_usuario_service.dart';
 import 'package:clubevent/domain/models/auth_usuario_model.dart';
 import 'package:clubevent/domain/usecases/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 
 class AuthUsuarioResponseScreen extends StatelessWidget {
@@ -33,7 +32,7 @@ class AuthUsuarioResponseScreen extends StatelessWidget {
                     Text("Usuario: ${usuario.usuario.nombre+' '+usuario.usuario.apellido}"),
                     Text("Perfil: ${usuario.perfil.nombre}"),
                     Text("Estado: ${usuario.estado}"),
-                    Text("Creado en: ${usuario.fecha_registro}"),
+                    Text("Creado en: ${usuario.fechaRegistro}"),
                   ],
                 ),
               );

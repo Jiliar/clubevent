@@ -4,14 +4,14 @@ class AuthPerfil{
   String nombre;
   String descripcion;
   int estado;
-  DateTime fecha_registro;
+  DateTime fechaRegistro;
 
   AuthPerfil({
     required this.guid,
     required this.nombre,
     required this.descripcion,
     required this.estado,
-    required this.fecha_registro
+    required this.fechaRegistro
   });
 
   factory AuthPerfil.fromJson(Map<String, dynamic> map) {
@@ -20,7 +20,7 @@ class AuthPerfil{
         nombre: map['nombre'],
         descripcion: map['descripcion'],
         estado:  map['estado'],
-        fecha_registro: DateTime.parse(map['fecha_registro'])
+        fechaRegistro: DateTime.parse(map['fechaRegistro'])
     );
   }
 
