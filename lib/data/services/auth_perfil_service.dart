@@ -12,7 +12,7 @@ class AuthPerfilService implements GenericService {
   @override
   Future<List<AuthPerfil>> fecthData({int limit = 5, Map? map}) async {
     var queryParameters = {'client_id': clientID};
-    var uri = Uri.https(baseUrl, '/2/auth_perfiles', queryParameters);
+    var uri = Uri.https(baseUrl, '/auth_perfiles', queryParameters);
     final response = await http.get(
       uri,
       headers: <String, String>{
