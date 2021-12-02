@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:clubevent/domain/models/evento_model.dart';
+import 'package:clubevent/domain/models/evento.dart';
 import 'package:clubevent/domain/services/generic_service.dart';
 import 'package:http/http.dart' as http;
 

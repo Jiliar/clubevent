@@ -5,12 +5,16 @@ import 'text_styles.dart';
 class MyTheme {
   static ThemeData get ligthTheme {
     return ThemeData(
-      brightness: Brightness.light,
       primarySwatch: AppColors.createMaterialColor(AppColors.primaryColor),
       colorScheme: AppColors.lightScheme,
       fontFamily: AppTextStyle.fontFamily,
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: Colors.white,
+      textTheme: AppTextStyle.textTheme,
+      cardTheme: const CardTheme(
+        color: Colors.white,
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        unselectedItemColor: Colors.grey.shade500,
+        selectedItemColor: AppColors.lightScheme.primary,
       ),
       inputDecorationTheme: InputDecorationTheme(
         border: const OutlineInputBorder(),
@@ -23,15 +27,19 @@ class MyTheme {
   // https://github.com/flutter/flutter/issues/19089
   static ThemeData get darkTheme {
     return ThemeData(
-      brightness: Brightness.dark,
       primarySwatch: AppColors.createMaterialColor(AppColors.primaryColor),
       colorScheme: AppColors.darkScheme,
-      toggleableActiveColor:
-      AppColors.createMaterialColor(AppColors.primaryColor).shade500,
+      toggleableActiveColor: AppColors.darkScheme.secondary,
       // this can all be copied, waiting for verification
       fontFamily: AppTextStyle.fontFamily,
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: Colors.white,
+      textTheme: AppTextStyle.textTheme.copyWith(
+        bodyText1: AppTextStyle.bodytext1.copyWith(
+          color: Colors.white70,
+        ),
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        unselectedItemColor: Colors.grey.shade400,
+        selectedItemColor: AppColors.lightScheme.primary,
       ),
       // copy from ligthTheme
       inputDecorationTheme: ligthTheme.inputDecorationTheme,

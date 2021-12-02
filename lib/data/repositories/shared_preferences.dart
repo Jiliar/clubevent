@@ -1,7 +1,7 @@
-import 'package:clubevent/domain/gateways/generic_gateway.dart';
+import 'package:clubevent/domain/repositories/shared_preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class LocalPreferences implements GenericGateway{
+class LocalPreferences implements SharedPreferencesInterface{
 
   @override
   Future<T?> retrieveData<T>(String key) async {

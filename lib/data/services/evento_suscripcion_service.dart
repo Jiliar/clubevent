@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:clubevent/domain/models/evento_suscripcion_model.dart';
+import 'package:clubevent/domain/models/evento_suscripcion.dart';
 import 'package:clubevent/domain/services/generic_service.dart';
 import 'package:http/http.dart' as http;
 

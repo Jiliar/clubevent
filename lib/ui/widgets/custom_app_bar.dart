@@ -1,34 +1,53 @@
-import 'package:clubevent/domain/usecases/controllers/theme_controller.dart';
+import 'package:clubevent/domain/usecases/controllers/ui.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
 class CustomAppBar extends AppBar {
-  final Widget tile;
   final BuildContext context;
-  final ThemeController controller;
+  final bool home;
+  final String picUrl;
+  final Widget tile;
+  final VoidCallback onSignOff;
+  final UIController controller;
 
   // Creating a custom AppBar that extends from Appbar with super();
-  CustomAppBar({
-    Key? key,
-    required this.controller,
-    required this.context,
-    required this.tile,
-  }) : super(
+  CustomAppBar(
+      {Key? key,
+        required this.context,
+        required this.controller,
+        required this.picUrl,
+        required this.tile,
+        required this.onSignOff,
+        this.home = true})
+      : super(
     key: key,
     centerTitle: true,
+    leading: Center(
+      child: CircleAvatar(
+        minRadius: 18.0,
+        maxRadius: 18.0,
+        backgroundImage: NetworkImage(picUrl),
+      ),
+    ),
     title: tile,
     actions: [
       IconButton(
-        icon: Obx(
-              () => Icon(
-            controller.darkMode
-                ? Icons.light_mode_rounded
-                : Icons.dark_mode_rounded,
-          ),
+        key: const Key("themeAction"),
+        icon: const Icon(
+          Icons.brightness_4_rounded,
         ),
-        onPressed: () => controller.darkMode = !controller.darkMode,
+        onPressed: () {
+          controller.manager.changeTheme(isDarkMode: !Get.isDarkMode);
+        },
       ),
+      IconButton(
+        key: const Key("logoutAction"),
+        icon: const Icon(
+          Icons.logout,
+        ),
+        onPressed: onSignOff,
+      )
     ],
   );
 }
